@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,21 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#02010a" />
   <title>Oliwier. — Web Designer & Developer</title>
-  <meta name="description" content="Single‑page business card site for Oliwier — Web Designer & Developer." />
+  <meta name="description" content="Single-page business card site for Oliwier — Web Designer & Developer." />
+  
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind (better: install locally for production) -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
-    tailwind.config = { theme: { extend: { fontFamily:{ sans:['Inter','ui-sans-serif','system-ui'] }, colors:{ brand:{500:'#6678ff'} }, boxShadow:{ glow:'0 10px 40px rgba(102,120,255,.35)'} }}};
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily:{ sans:['Inter','ui-sans-serif','system-ui'] },
+          colors:{ brand:{500:'#6678ff'} },
+          boxShadow:{ glow:'0 10px 40px rgba(102,120,255,.35)' }
+        }
+      }
+    };
   </script>
-  <!-- Favicon: simple O. monogram -->
-  <link rel="icon" type="image/svg+xml" href='data:image/svg+xml;utf8,
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-    <rect width="64" height="64" rx="12" fill="#0b0b14"/>
-    <circle cx="32" cy="32" r="18" fill="none" stroke="#6678ff" stroke-width="8"/>
-    <circle cx="48" cy="48" r="4" fill="#6678ff"/>
-  </svg>' />
+
+  <!-- ✅ Favicon (PNG) -->
+  <link rel="icon" type="image/png" href="/favicon.png" />
+
   <style>
     html,body{margin:0;height:100%;overflow:hidden;user-select:none;-webkit-user-select:none}
     html{scroll-behavior:smooth}
@@ -31,7 +39,6 @@
     canvas{display:block;width:100%;height:100%}
     .focus-ring:focus{outline:2px solid rgba(102,120,255,.8); outline-offset:2px}
     body.dragging{cursor:grabbing}
-  .focus-ring:focus{outline:2px solid rgba(102,120,255,.8); outline-offset:2px}
     body.dragging, body.dragging *{user-select:none;-webkit-user-select:none}
     main{touch-action:none}
   </style>
